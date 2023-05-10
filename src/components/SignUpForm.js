@@ -7,7 +7,7 @@ function SignUpForm(){
   const [role, setRole] = useState('');
 
   const handleSubmit = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     console.log(`Signing up user: ${username} with email: ${email} and password: ${password}`);
   }
 
