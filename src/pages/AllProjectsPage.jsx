@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import { useLocation } from "react-router-dom";
-import ProjectContainer from "../components/ProjectContainer";
-import getProjects from "../api/Projects";
+import MenuBar from '../components/MenuBar';
+import '../style/AllProjects.css'
+
 
 const AllProjects = () => {
   const [projects, setProjects] = useState({});
@@ -29,20 +29,16 @@ const AllProjects = () => {
 
 if(projects.projects?.results){
   return (
-    // <div className="container-fluid">
-    //   <div className="row">
-    //     <div className="title">
-    //     <ProjectContainer projects={projects} />
-    //     </div>
-    //   </div>
-    // </div>
     <div>
+    <MenuBar/>
     <table id='customer'>
       <tbody>
         <tr>
           <th>Project Name</th>
-          <th>Project Category</th>
           <th>Project Description</th>
+          <th>Project Manager</th>
+          <th>Project Developers</th>
+          <th>Project QAs</th>
         </tr>
         {projects?.projects?.results.map(
           (project) =>{
@@ -51,7 +47,23 @@ if(projects.projects?.results){
                   <tr>
                     <td><Link to={`${project.id}`} state={project}>{project.title}</Link></td>
                     <td>{project.details}</td>
-                    <td>{project.manager}</td>
+                    <td>{project.manager.username}</td>
+                    {project.developer?.map((dev) => {
+                      return (
+                        <React.Fragment key={dev.id}>
+                          <td>{dev.username}</td>
+                        </React.Fragment>
+                      )
+                    }
+                  )}
+                  {project.quality_assurance?.map((qa) => {
+                      return (
+                        <React.Fragment key={qa.id}>
+                          <td>{qa.username}</td>
+                        </React.Fragment>
+                      )
+                    }
+                  )}
                   </tr>
               </React.Fragment>
             ) }

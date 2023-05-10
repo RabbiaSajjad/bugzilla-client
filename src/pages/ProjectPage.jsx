@@ -2,10 +2,10 @@ import React from 'react'
 
 import { useLocation } from 'react-router-dom'
 import ProjectDetails from '../components/ProjectDetails'
+import MenuBar from '../components/MenuBar';
 
 const Project = () => {
   const location = useLocation()
-  console.log(location.state)
   return (
     <div className='container-fluid'>
       <div className='row'>

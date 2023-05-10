@@ -1,0 +1,27 @@
+#customer {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1rem;
+}
+
+#customer th, #customer td {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+#customer th {
+  background-color: #f2f2f2;
+}
+
+#customer td {
+  border-bottom: 1px solid #ddd;
+}
+
+.link {
+  color: blue;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

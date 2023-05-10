@@ -6,6 +6,8 @@ import HomePage from './pages/HomePage.jsx'
 import Project from './pages/ProjectPage'
 import AllBugs from './pages/AllBugsPage'
 import AllProjects from './pages/AllProjectsPage'
+import AllDevelopers from './pages/DevelopersPage'
+import AllQAs from './pages/QAsPage'
 
 const Routepaths = () => {
   return(
@@ -13,6 +15,8 @@ const Routepaths = () => {
     <Route path='/bugs' element={<AllBugs />} />
     <Route path='/projects' element={<AllProjects/>} />
     <Route path='/projects/:id' element={<Project />} />
+    <Route path='/developers' element={<AllDevelopers/>} />
+    <Route path='/QAs' element={<AllQAs/>} />
     <Route exact path='/' element={<HomePage/>}/>
     <Route path='*' element={<Navigate to="/"/>} />
   </Routes>

@@ -1,0 +1,66 @@
+.project-details {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.project-details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-details th {
+  text-align: left;
+  font-weight: bold;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-details td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-details td:first-child {
+  width: 30%;
+}
+
+.manager-details, .developer-details {
+  display: flex;
+  align-items: center;
+}
+
+.manager-avatar, .developer-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.manager-avatar img, .developer-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manager-info, .developer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.manager-name, .developer-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.manager-email, .developer-email {
+  font-size: 14px;
+  color: #888;
+}
