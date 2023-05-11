@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import './App.css'
 import HomePage from './pages/HomePage.jsx'
 import Project from './pages/ProjectPage'
+import Bug from './pages/BugPage'
 import AllBugs from './pages/AllBugsPage'
 import AllProjects from './pages/AllProjectsPage'
 import AllDevelopers from './pages/DevelopersPage'
@@ -13,6 +14,7 @@ const Routepaths = () => {
   return(
   <Routes>
     <Route path='/bugs' element={<AllBugs />} />
+    <Route path='/bugs/:id' element={<Bug />} />
     <Route path='/projects' element={<AllProjects/>} />
     <Route path='/projects/:id' element={<Project />} />
     <Route path='/developers' element={<AllDevelopers/>} />
